@@ -3,6 +3,7 @@ GCloud2WPのGUIバージョン
 
 ### 使い方についてはGCloud2WPのREADME.mdを読んでください。
 <br>
+
 ## GCloud2WPから追加した機能
 * 複数のURLを同時に変換できるようにした。
 * 直リンのURL単体で出力できるようにした。
