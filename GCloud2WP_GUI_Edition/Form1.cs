@@ -28,9 +28,13 @@ namespace GCloud2WP_GUI_Edition {
 
             string urls = textBox.Text;
 
-            if (!urls.Contains("http")) {
+            if (!urls.StartsWith("http")) {
                 DialogResult dlg = MessageBox.Show("たぶん、入力された値は不正だと思うんだよね…", "どうする?", MessageBoxButtons.RetryCancel, MessageBoxIcon.Hand); ;
                 if (dlg == DialogResult.Cancel) return;
+            }
+
+            if (!File.Exists(path.FOLDER)) {
+                FileEvent.CreateDirectory(path.FOLDER);
             }
 
             string[] urlList = ListEvent.ToList(urls);
